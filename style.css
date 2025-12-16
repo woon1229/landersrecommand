@@ -1,0 +1,118 @@
+@font-face {
+    font-family: 'KboDiamondGothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/KBO-Dia-Gothic_light.woff') format('woff');
+    font-weight: 300;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'KboDiamondGothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/KBO-Dia-Gothic_medium.woff') format('woff');
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'KboDiamondGothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/KBO-Dia-Gothic_bold.woff') format('woff');
+    font-weight: 700;
+    font-display: swap;
+}
+
+body {
+    font-family: 'KboDiamondGothic', sans-serif;
+    font-weight: 300;
+}
+
+h1,
+h2,
+h3,
+h4
+{
+    font-family: 'KboDiamondGothic', sans-serif;
+    font-weight: 500;
+}
+
+
+/* 네비게이션 */
+.navbar .nav-link {
+  position: relative;
+  color: rgba(255,255,255,0.8);
+  transition: color 0.2s ease;
+}
+
+/* hover 시 색만 변경 */
+.navbar .nav-link:hover {
+  color: #ffea99;
+}
+
+/* active 상태 */
+.navbar .nav-link.active {
+  color: #ffd966;
+}
+
+/* active 밑줄 */
+.navbar .nav-link.active::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -6px;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 2px;
+  background-color: #ffd966;
+}
+
+
+
+/* 헤더 영역 */
+header {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(images/IMG_2154.jpeg);
+    background-size: cover;
+    background-position: center top;
+    background-attachment: fixed;
+    margin-bottom: 80px;
+}
+
+#infield{ background-image: url(images/IMG_1918.jpeg);
+    background-size: contain;
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-color: white;
+    margin-bottom: 80px;
+
+    }
+
+#outfield{
+        background-image: url(images/IMG_17891.jpeg);
+        background-size: contain;
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-color: white;
+        margin-bottom: 80px;
+        }
+
+#player{ background-image: url(images/playerbg.png);
+            background-size: contain;
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-color: white;
+            margin-bottom: 80px;
+            }
+
+#endplay{ background-image: url(images/IMG_32921.JPG);
+            background-size: contain;
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-color: white;
+            margin-bottom: 80px;
+            }
+
+.text-dotdotdot {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+

@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1500, initial-scale=1">
+<title>랜필 맛집</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+/* ===== Font ===== */
+@font-face {
+    font-family: 'KboDiamondGothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/KBO-Dia-Gothic_light.woff') format('woff');
+    font-weight: 300;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'KboDiamondGothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/KBO-Dia-Gothic_medium.woff') format('woff');
+    font-weight: 500;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'KboDiamondGothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/KBO-Dia-Gothic_bold.woff') format('woff');
+    font-weight: 700;
+    font-display: swap;
+}
+
+/* ===== 공통 ===== */
+body {
+    font-family: 'KboDiamondGothic', sans-serif;
+    font-weight: 300;
+    padding-top: 70px;
+}
+
+/* ===== 네비 hover ===== */
+.navbar .nav-link {
+    color: #ffffff;
+    transition: color 0.2s ease;
+}
+.navbar .nav-link:hover {
+    color: #ffd966;
+}
+
+/* ===== 타이틀 영역 (전체 배경) ===== */
+.page-title-section {
+    background-color: rgb(255, 57, 67);/* 랜더스 필드 배경 색상 바꾸는 코드 */
+    color: #ffffff;
+    padding: 80px 0;
+    margin-bottom: 5%;
+}
+
+.page-title {
+    text-align: center;
+}
+
+/* ===== 카드 ===== */
+.food-card {
+    width: 300px;
+    height: 350px;
+    border: 1px solid #D7D7D7;
+    display: inline-block;
+    margin-left: 150px;
+    margin-bottom: 50px;
+    vertical-align: top;
+}
+
+.food-image {
+    height: 260px;
+    background-size: cover;
+    background-position: center;
+}
+
+.food-content {
+    text-align: center;
+    padding: 20px;
+}
+
+.food-title {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.food-desc {
+    color: #9a9a9a;
+    font-size: 16px;
+    margin-top: 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* ===== Top 버튼 ===== */
+.top-section {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2%;
+}
+
+/* ===== Footer ===== */
+footer {
+    background-color: #3a3a3a;/* 맨 아래 배경 색상 바꾸는 코드 */
+    color: #ffffff;
+}
+</style>
+</head>
+
+<body>
+
+<!-- 네비 -->
+<nav class="navbar navbar-expand-md bg-danger navbar-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <img src="images/ssglogo.png" alt="로고" width="90" height="35">
+        </a>
+
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#nav-menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="nav-menu">
+            <ul class="navbar-nav ms-auto my-2">
+                <li class="nav-item"><a class="nav-link" href="index.html">홈</a></li>
+                <li class="nav-item"><a class="nav-link" href="infeild.html">랜더스 필드 내부</a></li>
+                <li class="nav-item"><a class="nav-link" href="outfiled.html">외부 및 배달</a></li>
+                <li class="nav-item"><a class="nav-link" href="player.html">선수 추천</a></li>
+                <li class="nav-item"><a class="nav-link" href="endplay.html">뒷풀이</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- 타이틀 (배경 전체) -->
+<section class="page-title-section">
+    <div class="container">
+        <div class="page-title">
+            <h1 class="fw-bold">랜더스 필드 내부</h1>
+            <p>랜더스 필드 내 매점 음식 후기 및 추천</p>
+        </div>
+    </div>
+</section>
+
+<!-- 카드 -->
+<div class="food-card">
+     <div class="food-image"
+         data-bs-toggle="modal"
+         data-bs-target="#bestmenuModal"
+         style="background-image:url(images/IMG_2458.jpeg); cursor:pointer;">
+    </div>
+    <div class="food-content"> 
+         <h4 class="food-title">크림새우</h4>
+        <div class="food-desc">#새우튀김 #매콤한 크림</div>
+    </div>
+    </div>
+
+
+<!--모달 도전-->
+ <div class="modal fade" id="bestmenuModal" tabindex="-1" aria-labelledby="bestmenuModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-md modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title text-dark fs-5" id="bestmenuModalLabel">1루 2층 <br>스테이션 크림새우</h1>
+                        <button type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal" 
+                        aria-label="닫기"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="images/IMG_1786.jpeg" alt="크새" class="img-fluid">
+                        <p class="text-muted">얇고 바삭한 튀김옷을 입은 새우에 살짝 매콤한 크림소스를 더해, 느끼함 없이 끝까지 즐길 수 있는 메뉴. 접시 아래에 깔린 새우칩은 소스가 스며들며 풍미를 한층 더해줌.</p>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+<div class="food-card">
+     <div class="food-image"
+         data-bs-toggle="modal"
+         data-bs-target="#mara"
+         style="background-image:url(images/IMG_1010.jpeg); cursor:pointer;">
+    </div>
+    <div class="food-content"> 
+         <h4 class="food-title">마라새우</h4>
+        <div class="food-desc">#새우튀김 #마라</div>
+    </div>
+    </div>
+
+
+<!--모달 도전-->
+ <div class="modal fade" id="mara" tabindex="-1" aria-labelledby="bestmenuModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-md modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title text-dark fs-5" id="bestmenuModalLabel"> 1루 2층 <br>씬난다 스테이크 & 마라새우 </h1>
+                        <button type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="닫기"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="images/IMG_1010.jpeg" alt="마새" class="img-fluid">
+                        <p class="text-muted">튀김옷이 비교적 두꺼운 편으로, 스테이션 크림새우와는 다른 식감. 두툼한 튀김옷 덕분에 마라소스의 매운 맛이 잘 어우러지며, 마라 특유의 풍미가 강하게 느껴짐. 다만 마라 향과 맛이 분명해, 마라를 선호하지 않는 경우에는 호불호가 갈림. </p>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<div class="food-card">
+     <div class="food-image"
+         data-bs-toggle="modal"
+         data-bs-target="#mandu"
+         style="background-image:url(images/IMG_2953.jpeg); cursor:pointer;">
+    </div>
+    <div class="food-content"> 
+         <h4 class="food-title">만두</h4>
+        <div class="food-desc">#한입만두 #특제소스</div>
+    </div>
+    </div>
+
+
+<!--모달 도전-->
+ <div class="modal fade" id="mandu" tabindex="-1" aria-labelledby="bestmenuModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-md modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title text-dark fs-5" id="bestmenuModalLabel">3루 1층<br>북촌손만두</h1>
+                        <button type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="닫기"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="images/IMG_2153.jpeg" alt="만두" class="img-fluid">
+                        <p class="text-muted">주문과 동시에 튀겨낸 만두를 맛볼 수 있는 곳으로, 치킨 위주의 야구장 튀김 메뉴 사이에서 확실한 차별점을 가짐. 만두와 함께 제공되는 매콤한 소스 덕분에 느끼함 없이 부담 없이 즐길 수 있음.</p>
+                       
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<div class="food-card">
+     <div class="food-image"
+         data-bs-toggle="modal"
+         data-bs-target="#honey"
+         style="background-image:url(images/IMG_4802.jpeg); cursor:pointer;">
+    </div>
+    <div class="food-content"> 
+         <h4 class="food-title">닭강정</h4>
+        <div class="food-desc">#갓튀긴치킨 #4가지맛</div>
+    </div>
+    </div>
+
+
+<!--모달 도전-->
+ <div class="modal fade" id="honey" tabindex="-1" aria-labelledby="bestmenuModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-md modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title text-dark fs-5" id="bestmenuModalLabel">1루 2층 <br>허갈닭강정</h1>
+                        <button type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="닫기"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="images/IMG_19181.jpeg" alt="닭강정" class="img-fluid">
+                        <p class="text-muted">야구장 내에서 바로 튀겨낸 닭강정을 즉석에서 양념에 버무려 제공. 양념은 사입 제품으로 특별함은 크지 않지만, 갓 튀겨낸 닭강정을 현장에서 바로 즐길 수 있다는 점이 이곳만의 매력.</p>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<div class="food-card">
+     <div class="food-image"
+         data-bs-toggle="modal"
+         data-bs-target="#bingsu"
+         style="background-image:url(images/IMG_6400.jpeg); cursor:pointer;">
+    </div>
+    <div class="food-content"> 
+         <h4 class="food-title">빙수</h4>
+        <div class="food-desc">#카페 #다양한맛</div>
+    </div>
+    </div>
+
+
+<!--모달 도전-->
+ <div class="modal fade" id="bingsu" tabindex="-1" aria-labelledby="bestmenuModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-md modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title text-dark fs-5" id="bestmenuModalLabel">1루 2층 <br>커빙</h1>
+                        <button type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="닫기"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="images/IMG_5492.jpeg" alt="빙수" class="img-fluid">
+                        <p class="text-muted">더운 여름에 특히 생각나는 빙수 판매 매장으로, 오레오·딸기·팥빙수부터 1인 빙수까지 다양한 메뉴. 특히 딸기 빙수에는 직접 만든 딸기청이 올라가 있어, 야구장 밖에서 즐기는 빙수 못지않은 높은 퀄리티.</p>
+                       
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<div class="food-card">
+     <div class="food-image"
+         data-bs-toggle="modal"
+         data-bs-target="#chz"
+         style="background-image:url(images/IMG_2585.jpeg); cursor:pointer;">
+    </div>
+    <div class="food-content"> 
+         <h4 class="food-title">치즈푸틴</h4>
+        <div class="food-desc">#감자튀김 #꾸덕한맛</div>
+    </div>
+    </div>
+
+
+<!--모달 도전-->
+ <div class="modal fade" id="chz" tabindex="-1" aria-labelledby="bestmenuModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-md modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title text-dark fs-5" id="bestmenuModalLabel">1루 1층 <br>버거원더스</h1>
+                        <button type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="닫기"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="images/IMG_2585.jpeg" alt="치푸" class="img-fluid">
+                        <p class="text-muted">치즈 푸틴으로 잘 알려진 매장. 회전률이 낮을 경우 감자튀김이 눅눅하지만, 넉넉하게 올려주는 치즈소스 덕분에 끝까지 소스에 곁들여 즐길 수 있음.</p>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<!-- 안내 -->
+<section class="container py-5">
+    <h6 class="fw-bold text-center">추후 추가될 예정입니다. :)</h6>
+</section>
+
+<!-- Top -->
+<section class="top-section">
+    <a href="infeild.html">
+        <button class="btn btn-outline-danger">Top ↑</button>
+    </a>
+</section>
+
+<!-- 푸터 -->
+<footer>
+    <div class="container text-center">
+        <p class="py-3 mb-1">Copyright © 2025 Designed by Hong</p>
+        <p class="pb-3 fs-6 mb-0">
+            로고 이미지의 저작권은 SSG 랜더스 구단에 속합니다.
+        </p>
+    </div>
+</footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+</body>
+</html>

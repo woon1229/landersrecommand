@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1500, initial-scale=1">
+<title>랜필 맛집</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+/* ===== Font ===== */
+@font-face {
+    font-family: 'KboDiamondGothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/KBO-Dia-Gothic_light.woff') format('woff');
+    font-weight: 300;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'KboDiamondGothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/KBO-Dia-Gothic_medium.woff') format('woff');
+    font-weight: 500;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'KboDiamondGothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/KBO-Dia-Gothic_bold.woff') format('woff');
+    font-weight: 700;
+    font-display: swap;
+}
+
+/* ===== 공통 ===== */
+body {
+    font-family: 'KboDiamondGothic', sans-serif;
+    font-weight: 300;
+    padding-top: 70px;
+}
+
+/* ===== 네비 hover ===== */
+.navbar .nav-link {
+    color: #ffffff;
+    transition: color 0.2s ease;
+}
+.navbar .nav-link:hover {
+    color: #ffd966;
+}
+
+/* ===== 타이틀 영역 (전체 배경) ===== */
+.page-title-section {
+    background-color: rgb(255, 57, 67);/* 랜더스 필드 배경 색상 바꾸는 코드 */
+    color: #ffffff;
+    padding: 80px 0;
+    margin-bottom: 5%;
+}
+
+.page-title {
+    text-align: center;
+}
+
+/* ===== 카드 ===== */
+.food-card {
+    width: 300px;
+    height: 350px;
+    border: 1px solid #D7D7D7;
+    display: inline-block;
+    margin-left: 150px;
+    margin-bottom: 50px;
+    vertical-align: top;
+}
+
+.food-image {
+    height: 260px;
+    background-size: cover;
+    background-position: center;
+}
+
+.food-content {
+    text-align: center;
+    padding: 20px;
+}
+
+.food-title {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.food-desc {
+    color: #9a9a9a;
+    font-size: 16px;
+    margin-top: 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* ===== Top 버튼 ===== */
+.top-section {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2%;
+}
+
+/* ===== Footer ===== */
+footer {
+    background-color: #3a3a3a;/* 맨 아래 배경 색상 바꾸는 코드 */
+    color: #ffffff;
+}
+</style>
+</head>
+
+<body>
+
+<!-- 네비 -->
+<nav class="navbar navbar-expand-md bg-danger navbar-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <img src="images/ssglogo.png" alt="로고" width="90" height="35">
+        </a>
+
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#nav-menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="nav-menu">
+            <ul class="navbar-nav ms-auto my-2">
+                <li class="nav-item"><a class="nav-link" href="index.html">홈</a></li>
+                <li class="nav-item"><a class="nav-link" href="infeild.html">랜더스 필드 내부</a></li>
+                <li class="nav-item"><a class="nav-link" href="outfiled.html">외부 및 배달</a></li>
+                <li class="nav-item"><a class="nav-link" href="player.html">선수 추천</a></li>
+                <li class="nav-item"><a class="nav-link" href="endplay.html">뒷풀이</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- 타이틀 (배경 전체) -->
+<section class="page-title-section">
+    <div class="container">
+        <div class="page-title">
+            <h1 class="fw-bold">외부 및 배달</h1>
+            <p>랜더스 필드 인근 매장 및 배달 음식 후기 및 추천</p>
+        </div>
+    </div>
+</section>
+
+<!-- 카드 -->
+<div class="food-card">
+     <div class="food-image"
+         data-bs-toggle="modal"
+         data-bs-target="#yagop"
+         style="background-image:url(images/IMG_0011.jpeg); cursor:pointer;">
+    </div>
+    <div class="food-content"> 
+         <h4 class="food-title">야채곱창</h4>
+        <div class="food-desc">#매콤 #가성비</div>
+    </div>
+    </div>
+
+
+<!--모달 도전-->
+ <div class="modal fade" id="yagop" tabindex="-1" aria-labelledby="bestmenuModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-md modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title text-dark fs-5" id="bestmenuModalLabel">배달<br>매우곱닭 주안점</h1>
+                        <button type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="닫기"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="images/IMG_0028.jpeg" alt="야곱" class="img-fluid">
+                        <p class="text-muted">다양한 야식 메뉴를 판매하는 매장으로, 특히 야채곱창과 대창을 추천. 야채곱창은 잡내가 거의 없고 매콤한 맛이 살아 있어 질리지 않고 즐길 수 있으며, 대창은 함께 제공되는 소스와의 궁합이 좋고 식은 뒤에도 질기지 않을 만큼 상태가 좋음.</p>
+                    
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+<div class="food-card">
+     <div class="food-image"
+         data-bs-toggle="modal"
+         data-bs-target="#taco"
+         style="background-image:url(images/IMG_1789.jpeg); cursor:pointer;">
+    </div>
+    <div class="food-content"> 
+         <h4 class="food-title">타코</h4>
+        <div class="food-desc">#신선 #다양한재료</div>
+    </div>
+    </div>
+
+
+<!--모달 도전-->
+ <div class="modal fade" id="taco" tabindex="-1" aria-labelledby="bestmenuModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-md modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title text-dark fs-5" id="bestmenuModalLabel">배달<br>모리토스 멕시칸그릴</h1>
+                        <button type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="닫기"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="images/IMG_1789.jpeg" alt="타코" class="img-fluid">
+                        <p class="text-muted">가볍게 즐기기 좋으면서도 한 끼 식사로 충분한 메뉴. 배달 시 비닐장갑이 함께 제공되지만, 야채가 흘러내릴 수 있어 먹기 편한 음식은 아님. 다만 야구장에서 흔치 않은 프레시한 구성이 특징이며, 부드러운 또띠아 위에 재료를 올려 즐기는 소프트 타코를 특히 추천.</p>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+<div class="food-card">
+     <div class="food-image"
+         data-bs-toggle="modal"
+         data-bs-target="#pizza"
+         style="background-image:url(images/IMG_8472.jpeg); cursor:pointer;">
+    </div>
+    <div class="food-content"> 
+         <h4 class="food-title">피자</h4>
+        <div class="food-desc">#신선 #다양한맛</div>
+    </div>
+    </div>
+
+
+<!--모달 도전-->
+ <div class="modal fade" id="pizza" tabindex="-1" aria-labelledby="bestmenuModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-md modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title text-dark fs-5" id="bestmenuModalLabel">배달<br>괴로피자 주안 본점</h1>
+                        <button type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="닫기"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="images/IMG_8473.jpeg" alt="피자" class="img-fluid">
+                        <p class="text-muted">테이블 예매에 성공했을 경우 한 번쯤 주문해볼 만한 메뉴. 맛 자체는 다른 곳과 크게 다르지 않지만, 치즈 상태가 좋아 배달로 받아도 쫄깃한 식감을 유지했음.</p>
+                    
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+<!-- 안내 -->
+<section class="container py-5">
+    <h6 class="fw-bold text-center">추후 추가될 예정입니다. :)</h6>
+</section>
+
+<!-- Top -->
+<section class="top-section">
+    <a href="infeild.html">
+        <button class="btn btn-outline-danger">Top ↑</button>
+    </a>
+</section>
+
+<!-- 푸터 -->
+<footer>
+    <div class="container text-center">
+        <p class="py-3 mb-1">Copyright © 2025 Designed by Hong</p>
+        <p class="pb-3 fs-6 mb-0">
+            로고 이미지의 저작권은 SSG 랜더스 구단에 속합니다.
+        </p>
+    </div>
+</footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+</body>
+</html>
